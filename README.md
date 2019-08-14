@@ -8,6 +8,8 @@ Mengirim chat ke semua teman FB secara otomatis
  1. $apt install python2
  2. $pip2 install mechanize
  3. $git clone https://github.com/TWO-ONE-21/auto-chat-fb
+ 4. $cd auto-chat-fb
+ 5. $python2 chat.py
  
 # Contact
   Whatsapp: 085837110651
