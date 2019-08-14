@@ -1,5 +1,6 @@
 # auto-chat-fb
 # RECODE?? HARAP CANTUMKAN NAMA AUTHOR!! :)
+![Robot](https://automatorsworld.com/wp-content/uploads/2017/07/bots.jpg)
 
 # Purpose
 Mengirim chat ke semua teman FB secara otomatis
