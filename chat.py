@@ -79,7 +79,7 @@ def masuk():
 	link = br.geturl()
 	if 'save-device' in link:
 		membuka('https://mobile.facebook.com/home.php')
-		print warna.hijau + 'Berhasil Masuk'
+		print warna.hijau + '\nBerhasil Masuk'
 	elif 'checkpoint' in link:
 		print warna.merah + 'Akun anda terkena checkpoint,\nHarap login dan mengkonfirmasikan identitas anda\nmelalui opera mini'
 		ulangi()
@@ -88,7 +88,7 @@ def masuk():
 		ulangi()
 
 def id():
-	print warna.kuning + 'Mengumpulkan id teman...'
+	print warna.kuning + '\nMengumpulkan id teman...'
 	membuka('https://m.facebook.com/friends/center/mbasic/?fb_ref=bm&sr=1&ref_component=mbasic_bookmark&ref_page=XMenuController')
 	id_terkumpul(membuka('https://m.facebook.com/friends/center/friends/?fb_ref=fbm&ref_component=mbasic_bookmark&ref_page=XMenuController'))
 	next = br.find_link(url_regex='friends_center_main').url
@@ -109,14 +109,14 @@ def id():
 			print warna.kuning + '\nBerhasil mengumpulkan ' + warna.merah + str(len(IdTeman)) + warna.kuning + ' ID Teman'
 			break
 	if len(IdTeman) != 0:
-		print warna.kuning + "Menyimpan ID teman"
+		print warna.kuning + "\nMenyimpan ID teman"
 		File = 0
 		try:
 			open(os.sys.path[0]+'/id_terkumpul.txt','w').write('\n'.join(IdTeman))
-			print warna.hijau + 'Berhasil menyimpan ID teman'
+			print warna.hijau + '\nBerhasil menyimpan ID teman'
 			File += 1
 		except:
-			print warna.merah + 'Gagal menyimpan'
+			print warna.merah + '\nGagal menyimpan'
 		if File == 1:
 			chat()
 		else:
@@ -126,11 +126,12 @@ def chat():
 	try:
 		teman = open(os.sys.path[0]+'/id_terkumpul.txt','r')
 	except:
-		print warna.merah + 'Anda belum mengumpulkan ID,\nHarap kumpulkan ID terlebih dahulu!!!'
+		print '\n' + warna.merah + 'Anda belum mengumpulkan ID,\nHarap kumpulkan ID terlebih dahulu!!!\n'
 		return id()
 	idteman = teman.readlines()
 	teman.close()
-	pesan = raw_input(warna.hijau + 'Ketikkan Pesan Anda: ' + warna.kuning)
+	pesan = raw_input(warna.hijau + 'Ketikkan Pesan Anda: ' + warna.kuning) + '\nDikirimkan melalui auto-chat-fb.\ngithub.com/TWO-ONE-21/auto-chat-fb'
+	print '\n'
 	terkirim = 0
 	for i in idteman:
 		ID_teman = i.strip("\n")
