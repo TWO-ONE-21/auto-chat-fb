@@ -57,6 +57,7 @@ def ulangi():
 		os.system('cls')
 		return masuk()
 	elif ulang != 'Y' and ulang != 'N':
+		os.system('cls')
 		print warna.merah + 'TEKAN ' + warna.biru + '[y]' + warna.merah + ' UNTUK MENCOBA LAGI, ATAU TEKAN ' + warna.biru + '[y]' + warna.merah + ' UNTUK MEMBATALKAN!!!'
 		return ulangi()
 	else:
@@ -118,6 +119,7 @@ def id():
 		except:
 			print warna.merah + '\nGagal menyimpan'
 		if File == 1:
+			os.system('cls')
 			chat()
 		else:
 			sys.exit()
