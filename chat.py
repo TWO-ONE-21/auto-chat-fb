@@ -140,12 +140,12 @@ def chat():
 		membuka("https://mbasic.facebook.com/messages/thread/" + ID_teman)
 		try:
 			br.select_form(nr=1)
+		        br.form['body'] = pesan
+		        br.submit()
+		        terkirim += 1
+		        print warna.merah + str(terkirim) + warna.hijau + ' chat telah terkirim'
 		except:
 			continue
-		br.form['body'] = pesan
-		br.submit()
-		terkirim += 1
-		print warna.merah + str(terkirim) + warna.hijau + ' chat telah terkirim'
 
 def cover():
 	print warna.hijau + " ____  _     _____  ____               |\ |\ \n/  _ \/ \ /\/__ __\/  _ \CHAT          \ \| |\n| / \|| | ||  / \  | / \|               \ | |\n| |-||| \_/|  | |  | \_/|             .--''/\n\_/ \|\____/  \_/  \____/FACEBOOK    /o     \ \n                                     \      /\n===================================== {>o<}='",'\n'
