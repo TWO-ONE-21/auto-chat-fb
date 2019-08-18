@@ -54,10 +54,10 @@ def ulangi():
 	ulang = raw_input(warna.biru + "Apakah anda ingin mencoba login kembali?[y/n] " + warna.kuning)
 	ulang = ulang.upper()
 	if ulang == 'Y':
-		os.system('cls')
+		os.system('clear')
 		return masuk()
 	elif ulang != 'Y' and ulang != 'N':
-		os.system('cls')
+		os.system('clear')
 		print warna.merah + 'TEKAN ' + warna.biru + '[y]' + warna.merah + ' UNTUK MENCOBA LAGI, ATAU TEKAN ' + warna.biru + '[y]' + warna.merah + ' UNTUK MEMBATALKAN!!!'
 		return ulangi()
 	else:
@@ -119,7 +119,7 @@ def id():
 		except:
 			print warna.merah + '\nGagal menyimpan'
 		if File == 1:
-			os.system('cls')
+			os.system('clear')
 			chat()
 		else:
 			sys.exit()
