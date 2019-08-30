@@ -6,7 +6,6 @@
 import mechanize
 import re,time,os,sys
 br = mechanize.Browser()
-os.system('color')
 
 class warna:
 	merah = '\033[31m'
