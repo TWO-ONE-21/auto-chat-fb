@@ -131,7 +131,7 @@ def chat():
 		return id()
 	idteman = teman.readlines()
 	teman.close()
-	pesan = raw_input(warna.hijau + 'Ketikkan Pesan Anda: ' + warna.kuning) + '\nDikirimkan melalui auto-chat-fb.\ngithub.com/TWO-ONE-21/auto-chat-fb'
+	pesan = raw_input(warna.hijau + 'Ketikkan Pesan Anda: ' + warna.kuning)
 	print '\n'
 	terkirim = 0
 	for i in idteman:
